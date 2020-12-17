@@ -1,0 +1,53 @@
+<div th:fragment="detailsTemplate" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="next-page">
+        <table class="">
+            <tr>
+                <th>Dep. Code</th>
+                <th>No. of Lives</th>
+                <th>Health</th>
+                <th>Dental</th>
+                <th>Life</th>
+                <th>ADD</th>
+                <th>Dep. Life</th>
+                <th>Optional Dep. Life</th>
+                <th>Optional Life</th>
+                <th>W.I</th>
+                <th>L.T.D</th>
+                <th>Critical Illness</th>
+                <th>Stop Loss</th>
+                <th>Total of Benefits</th>
+            </tr>
+            <tr th:each="task : ${Inv_details}" >
+                <tr>
+                    <td th:text="${task.getCO_ContractID_Indiv()}"></td>
+                    <td  colspan="5" th:text="${task.getPersonal_Indiv()}" ></td>
+                </tr>
+                <tr>
+                    <td>Coverage</td>
+                    <td th:text="${task.getNoOfLives()}"></td>
+                </tr>
+
+
+                <td colspan="2">Premium</td>
+                <td th:text="${task.getHealth()}"></td>
+                <td th:text="${task.getDental()}"></td>
+                <td th:text="${task.getLife()}"></td>
+
+                <td th:text="${task.getHealth()}"></td>
+                <td th:text="${task.getDental()}"></td>
+                <td th:text="${task.getLife()}"></td>
+
+                <td th:text="${task.getHealth()}"></td>
+                <td th:text="${task.getDental()}"></td>
+                <td th:text="${task.getLife()}"></td>
+                <td th:text="${task.getHealth()}"></td>
+                <td th:text="${task.getDental()}"></td>
+                <td th:text="${task.getLife()}"></td>
+
+            </tr>
+        </table>
+        </div>
+
+
+
+</div>

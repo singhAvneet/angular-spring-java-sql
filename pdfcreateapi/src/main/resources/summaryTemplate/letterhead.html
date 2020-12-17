@@ -1,0 +1,26 @@
+<div th:fragment="letterhead" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h2 class="center">Group Medical Service</h2>
+    <table >
+        <tr class="address-block">
+            <td class="bottom left">
+                <span  th:text="${newdetails.get(0).getGR_CompanyName()}"></span><br></br>
+                <span  th:text="${newdetails.get(0).getAD_AddressLine1()}"></span><br></br>
+                <span  th:text="${City_Province}"></span><br></br>
+                <span  th:text="${County_Postal}"></span><br></br>
+            </td>
+            <td><pre>                                 </pre></td>
+            <td class="bottom left" >
+               <pre class="h3">Group Benefit Invoice</pre><hr></hr>
+                <strong>Date</strong><br></br>
+                <span  th:text="${Date}"></span><br></br><hr></hr>
+                <strong>GMS Group Number</strong><br></br>
+                <span th:text="${newdetails.get(0).getCO_ContractID_Group()}"></span><br></br><hr></hr>
+                <strong>Invoice Number</strong><br></br>
+                <span th:text="${newdetails.get(0).getInvoiceID()}"></span><br></br><hr></hr>
+                <strong>Period Covered</strong><br></br>
+                <span th:text="${Period_Covered}"></span><br></br><hr></hr>
+            </td>
+        </tr>
+    </table>
+
+</div>

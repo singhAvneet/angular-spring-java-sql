@@ -1,0 +1,99 @@
+<div th:fragment="summary" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<b>Summary:</b>
+
+<table class="customers">
+    <tr>
+        <th>Total by Benefits</th>
+        <th>No. of Lives</th>
+        <th>Volume Billed</th>
+        <th>Totals</th>
+    </tr>
+    <tr>
+        <td>Health</td>
+        <td th:text="${newdetails.get(0).getHealthCount()}"></td>
+        <td th:text="${HealthVol}"></td>
+        <td th:text="${SUMHealth}"></td>
+
+    </tr>
+    <tr>
+        <td>Dental</td>
+        <td th:text="${newdetails.get(0).getDentalCount()}"></td>
+        <td th:text="${DentalVol}"></td>
+        <td th:text="${SUMDental}"></td>
+    </tr>
+    <tr>
+        <td>Basic Life</td>
+        <td th:text="${newdetails.get(0).getLifeCount()}"></td>
+        <td th:text="${LifeVol}"></td>
+        <td th:text="${SUMLifePremium}"></td>
+    </tr>
+    <tr>
+        <td>ADD</td>
+        <td th:text="${newdetails.get(0).getADDCount()}"></td>
+        <td th:text="${ADDVol}"></td>
+        <td th:text="${SUMADPremium}"></td>
+    </tr>
+    <tr>
+        <td>Dependent Life</td>
+        <td th:text="${newdetails.get(0).getADDCount()}"></td>
+        <td th:text="${DepLifeVol}"></td>
+        <td th:text="${SUMDepLife}"></td>
+    </tr>
+    <tr>
+        <td>Optional Dependent Life</td>
+        <td th:text="${newdetails.get(0).getOptDepLifeCount()}"></td>
+        <td th:text="${DepOptLifeVol}"></td>
+        <td th:text="${SUMDepOptLife}"></td>
+    </tr>
+    <tr>
+        <td>Optionala Life</td>
+        <td th:text="${newdetails.get(0).getOptLifeCount()}"></td>
+        <td th:text="${OptLifeVol}"></td>
+        <td th:text="${SUMOptLife}"></td>
+    </tr>
+    <tr>
+        <td>W.I</td>
+        <td th:text="${newdetails.get(0).getWICount()}"></td>
+        <td th:text="${WIVol}"></td>
+        <td th:text="${SUMWI}"></td>
+    </tr>
+    <tr>
+        <td>L.T.D</td>
+        <td th:text="${newdetails.get(0).getLTDCount()}"></td>
+        <td th:text="${LTDVol}"></td>
+        <td th:text="${SUMLTD}"></td>
+    </tr>
+    <tr>
+        <td>Critical Illness</td>
+        <td th:text="${newdetails.get(0).getCritCount()}"></td>
+        <td th:text="${CriticalIllnessVol}"></td>
+        <td th:text="${SUMCriticalIllness}"></td>
+    </tr>
+    <tr>
+        <td>Optional ADD</td>
+        <td th:text="${newdetails.get(0).getOptADDCount()}"></td>
+        <td th:text="${OptADDVol}"></td>
+        <td th:text="${SUMOptADD}"></td>
+    </tr>
+    <tr>
+        <td>Stop Loss</td>
+        <td th:text="${newdetails.get(0).getStopLossCount()}"></td>
+        <td th:text="${StopLossVol}"></td>
+        <td th:text="${SUMStopLoss}"></td>
+    </tr>
+</table>
+    <div  style="border:1px solid #ddd; border-width: 0 1px 1px 1px">
+    <table style="color:white">
+        <tr><td>hello</td></tr>
+        <tr><td>hello</td></tr>
+        <tr><td>hello</td></tr>
+        <tr><td>hello</td></tr>
+        <tr><td>hello</td></tr>
+        <tr><td>hello</td></tr>
+        <tr><td>hello</td></tr>
+        <tr><td>hello</td></tr>
+        <tr><td>hello</td></tr>
+    </table>
+    </div>
+</div>

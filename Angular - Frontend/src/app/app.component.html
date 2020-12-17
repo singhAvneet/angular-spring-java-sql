@@ -1,0 +1,38 @@
+<div class="form-style-6 mat-app-background basic-container " id="container">
+  <h1>Invoice Us</h1>
+
+ 
+ <app-loader  *ngIf="show"></app-loader>  
+
+<input type="checkbox" value=""  [(ngModel)]="checkbox" [ngModelOptions]="{standalone: true}">
+ <textarea cols="1" rows="13"  #titleInput [(ngModel)]="Data"></textarea>
+ <input type="button" value="HSA Print" (click)="print(titleInput.value)" class="button" />
+
+
+
+
+
+
+
+ <!-- <form>
+  <input type="text" [(ngModel)]="dataset.ContractId" name="Groupid" placeholder="Group ID" required minlength="4" class="form-control"/>
+  <input type="month" id="start" name="start" style="    margin-bottom: 4%;"
+  min="2008-03" value="2018-05" [(ngModel)]="dataset.InvoiceDate" [ngModelOptions]="{standalone: true}" class="form-control">
+  <input type="button" value="Search" (click)="search()" class="button" />
+  </form> -->
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+

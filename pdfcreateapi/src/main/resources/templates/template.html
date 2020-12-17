@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" media="all" href="style.css"/>
+
+    </head>
+
+    <body>
+        <div th:include="letterhead::letterhead"></div>
+        <div th:include="summary::summary"></div>
+
+        <div class="center"><h2>Group Medical Service</h2></div>
+        <table >
+            <tr class="address-block">
+                <td class="bottom left">
+                    <strong>Group Name: </strong><span  th:text="${GR_CompanyName}"></span><br></br>
+                    <strong>GMS Group Number:</strong><span th:text="${CO_ContractID_Group}"></span>
+                </td>
+                <td><pre>                                 </pre></td>
+                <td class="bottom left" >
+                    <strong>Date Issued: </strong><span  th:text="${Date}"></span><br></br>
+                    <strong>Invoice Number:</strong><span th:text="${InvoiceID}"></span>
+                </td>
+            </tr>
+        </table>
+
+        <table class="customers">
+            <tr>
+                <th>Health</th>
+                <th>Dental</th>
+                <th>Basic Life</th>
+                <th>ADD</th>
+                <th>Dep. Life</th>
+                <th>Optional Dep. Life</th>
+                <th>Optional Life</th>
+                <th>W.I</th>
+                <th>L.T.D</th>
+                <th>Critical Illness</th>
+                <th>Optional ADD</th>
+                <th>Stop Loss</th>
+                <th>Total of Benefits</th>
+            </tr>
+            <tr>
+                <td th:text="${SUMHealth}"></td>
+                <td th:text="${SUMDental}"></td>
+                <td th:text="${SUMLifePremium}"></td>
+                <td th:text="${SUMADPremium}"></td>
+                <td th:text="${SUMDepLife}"></td>
+                <td th:text="${SUMDepOptLife}"></td>
+                <td th:text="${SUMOptLife}"></td>
+                <td th:text="${SUMWI}"></td>
+                <td th:text="${SUMLTD}"></td>
+                <td th:text="${SUMCriticalIllness}"></td>
+                <td th:text="${SUMOptADD}"></td>
+                <td th:text="${SUMStopLoss}"></td>
+                <td th:text="${Totals}"></td>
+            </tr>
+        </table>
+        <div class="address-block">
+            <p class="right">Monthly Premium      :       <span class="underline" th:text="${Total_Payable}"></span></p>
+
+            <div  style="text-align:left;margin-left:30em"><p>
+                This statement indicates the new amount of your monthly <br></br>
+                pre-authorized payments for  coverage, based on your <br></br>
+                current-year rates. <br></br><br></br>
+                This is not an invoice for payment.<br></br><br></br>
+                Thank you for choosing Group Medical Services!  <br></br><br></br>            </p>
+                <b>Please retain for your record</b>
+            </div>
+        </div>
+
+        <div class='footer' th:include="footer::footer"></div>
+        <div class="next-page tnc">
+            <h2>Terms and Conditions</h2>
+            <div class=" columnHalf">
+                <ul >
+                    <li>We accept the following payment methods:
+                        <ul>
+                            <li>Cheque</li>
+                            <li>Visa</li>
+                            <li>Mastercard</li>
+                            <li>Pre-Authorized payments</li>
+                        </ul>
+                    </li>
+                    <li>To be eligible for pre-authorized payments we require the
+                        first month's payment (including PAP Admin fee), a void
+                        cheque and a completed PAP Authorization form.
+                        If your banking information changes please notify our office
+                        so our system can be updated.</li>
+                    <li>Invoices are due upon receipt as claims are not paid until the
+                        invoice is fully paid.</li>
+                </ul>
+            </div>
+            <div class="columnHalf">
+                <ul>
+                    <li>In the event that your invoice is overpaid an adjustment will be
+                        made to your account and the overpaid amount will be deducted
+                        from your next invoice.
+                    </li>
+                    <li>If your invoice is underpaid your account will be in arrears and
+                        the amount owing will be added to your next invoice.
+                    </li>
+                    <li>In the event that a payment is NSF you will receive a written
+                        notification.  If your payment was made through PAP, two months
+                        premium plus an NSF charge will be credited from your bank the
+                        next month.  If your payment was made by cheque, we require
+                        immediate repayment of premium including NSF charge.
+                    </li>
+                    <li> GST is calculated as Number of Lives for EFAP multiplied
+                        by $0.20.</li>
+                </ul>
+            </div>
+        </div>
+        <div width="100%" class="fixedBottom">
+         <p><b>Complete this portion if removing any employees/employee's dependents from coverage:</b></p>
+
+        <table class="formTable ">
+            <tr>
+                <th>Contract No.</th> <th>Name</th> <th>Option Description</th> <th>Remarks</th>
+                <th>Effective Date</th> <th>Termination Date</th> <th>Account of Decrease</th>
+            </tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr>
+                <td colspan="3"></td><td colspan="3">Total Decrease:   </td><td></td>
+            </tr>
+        </table>
+            <p> * To add employee(s)/employee's dependant, please complete an Enrolment/Change Form and submit to Group Medical Services.
+                Group Medical Services is the operating name for GMS Insurance.
+            </p>
+
+        </div>
+        <div class='footer' th:include="footer::footer"></div>
+
+        <p id="demo">JavaScript can change HTML content.</p>
+    </body>
+
+
+</html>

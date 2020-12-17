@@ -1,0 +1,193 @@
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+@page {
+
+    @bottom-left {
+        content: element(footer);
+        vertical-align: top;
+        padding-top: 10px;
+    }
+
+    @top-right {
+        content: element(header);
+        vertical-align: bottom;
+        padding-bottom: 10px;
+    }
+
+    margin-top: 1cm;
+
+    margin-bottom: 3.3cm;
+
+    size: A3 portrait;
+}
+
+div.header {
+    position: running(header);
+}
+
+div.footer {
+    display: block;
+    margin-top: 0.5cm;
+    position: running(footer);
+}
+
+#pagenumber:before {
+    content: counter(page);
+}
+
+#pagecount:before {
+    content: counter(pages);
+}
+
+.logo-container {
+    text-align: right;
+}
+
+.page-count {
+    text-align: right;
+}
+
+.logo {
+    width: 275px;
+}
+
+h1{
+    font-size: 18px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.h3{
+font-size: 18px;
+ font-weight: bold;
+}
+
+p {
+    font-size: 12px;
+}
+
+.footer {
+    text-align: center;
+}
+
+@font-face {
+    font-family: "Bar-Code 39";
+    src: url(Code39.ttf) format('truetype');
+}
+
+.barcode {
+    font-family: "Bar-Code 39";
+    font-size: 26px;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+.address-block {
+    height: 100px;
+}
+
+table {
+    width: 100%;
+    margin-bottom:1em
+}
+
+hr {
+    background-color: #000000;
+    border: dashed #000000 0.5px;
+    height: 1px;
+}
+
+.page-break {
+    page-break-after: always;
+}
+.next-page {
+    page-break-before: always
+}
+
+.columnHalf {
+  width: 50%;
+   float: left;
+}
+
+
+
+
+
+
+
+
+
+.customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+   border: 1px solid #ddd;
+}
+
+.customers td, .customers th {
+
+  padding: 8px;
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.columnCount{
+  column-count: 2;
+}
+
+
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #aeaeae;
+  border: 1px solid #ddd;
+}
+
+.center{
+width="100%";
+text-align: center
+}
+
+ .underline {
+    border-bottom: 1px solid
+     }
+.tnc li{
+margin-bottom:1em
+}
+.formTable td{
+padding:1em
+}
+.formTable, .formTable td, .formTable th{
+ border: 1px solid black;
+ }
+ .formTable {
+   border-collapse: collapse;
+}
+
+.fixedBottom {
+ margin-top:80em
+
+}
+.customers.details{
+  border-collapse: collapse;
+}
+.customers.details tr{
+border: 1 px solid black;
+outline: thin solid
+}
+

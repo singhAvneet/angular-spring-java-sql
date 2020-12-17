@@ -1,0 +1,31 @@
+---
+version: '3.4'
+services:
+  ngapp:
+    image: avneet7193/ngapp
+    container_name: ngapp
+    restart: always
+    ports:
+      - "4200:80"
+
+  mssqlapi:
+    image: avneet7193/mssqlapi
+    container_name: mssqlapi
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://172.16.86.112;databaseName=CIMS
+      SPRING_DATASOURCE_USERNAME: pdfgenerator
+      SPRING_DATASOURCE_PASSWORD: Gms@1212
+    ports:
+      - "8081:8081"
+
+  pdfapp:
+    image: avneet7193/pdfapi
+    container_name: pdfapp
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      EMAIL_TO: asingh@gms.ca
+#docker run -d -p 8080:8080 -e EMAIL_TO:asingh@gms.ca avneet7193/pdfapi
+
+#  docker cp 39c3fc0a9771:/EOBs/2020/2/26/jass.pdf /
